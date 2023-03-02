@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.khadri.hibernate.component.Student"
+		table="student_comp">
+		<id name="sno" column="sno" type="string">
+			<generator class="uuid" />
+		</id>
+		<property name="sname" column="sname" type="string" />
+		<component name="sadd"
+			class="com.khadri.hibernate.component.Address">
+			<property name="doorNo" column="doorNo" type="int" />
+			<property name="street" column="street" type="string" />
+		</component>
+	</class>
+</hibernate-mapping>

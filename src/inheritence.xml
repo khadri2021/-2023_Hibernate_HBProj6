@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.khadri.hibernate.inheritence.Traveller"
+		table="TRAVELER" discriminator-value="By Simple Traveller">
+		
+		<id name="travellerId" column="TRAVELER_ID" type="int">
+			<generator class="increment"></generator>
+		</id>
+		<discriminator column="TRAVELER_TYPE" type="string"
+				length="20" />
+		<property name="travellerName" column="TRAVELER_NAME"
+				type="string" />
+	
+				
+		<subclass name="com.khadri.hibernate.inheritence.BykeTraveller" discriminator-value="By Byke Traveller">
+				<property name="bykeName" column="BYKE_NAME" type="string" />
+		</subclass>
+		<subclass name="com.khadri.hibernate.inheritence.CarTraveller" discriminator-value="By Car Traveller">
+				<property name="carName" column="CAR_NAME" type="string" />
+		</subclass>
+		<subclass name="com.khadri.hibernate.inheritence.AirTraveller" discriminator-value="By Air Traveller">
+				<property name="planeName" column="PLANE_NAME" type="string" />
+		</subclass>
+ 	</class>
+</hibernate-mapping>
