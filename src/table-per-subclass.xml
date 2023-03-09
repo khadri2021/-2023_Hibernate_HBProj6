@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.khadri.hibernate.table.per.subclass.Traveller1"
+		table="TRAVELER1">
+		<id name="travellerId" column="TRAVELER_ID" type="int">
+			<generator class="increment" />
+		</id>
+
+		<property name="travellerName" column="TRAVELER_NAME"
+			type="string" />
+		<joined-subclass
+			name="com.khadri.hibernate.table.per.subclass.BykeTraveller1"
+			table="BYKE_TRAVELER1">
+			<key column="BYKE_ID" />
+			<property name="bykeName" column="BYKE_NAME" type="string" />
+		</joined-subclass>
+		<joined-subclass
+			name="com.khadri.hibernate.table.per.subclass.CarTraveller1"
+			table="CAR_TRAVELER1">
+			<key column="CAR_ID" />
+			<property name="carName" column="CAR_NAME" type="string" />
+		</joined-subclass>
+		<joined-subclass
+			name="com.khadri.hibernate.table.per.subclass.AirTraveller1"
+			table="AIR_TRAVELER1">
+			<key column="AIR_ID" />
+			<property name="planeName" column="PLANE_NAME" type="string" />
+		</joined-subclass>
+
+	</class>
+</hibernate-mapping>

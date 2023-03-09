@@ -1,6 +1,6 @@
-package com.khadri.hibernate.inheritence;
+package com.khadri.hibernate.table.per.concrete;
 
-public class CarTraveller extends Traveller {
+public class CarTraveller2 extends Traveller2 {
 	private String carName;
 
 	public String getCarName() {

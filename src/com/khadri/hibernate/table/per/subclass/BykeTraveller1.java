@@ -1,6 +1,6 @@
-package com.khadri.hibernate.inheritence;
+package com.khadri.hibernate.table.per.subclass;
 
-public class BykeTraveller extends Traveller{
+public class BykeTraveller1 extends Traveller1{
 	private String bykeName;
 
 	public String getBykeName() {

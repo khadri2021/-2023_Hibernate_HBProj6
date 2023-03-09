@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-mapping>
+	<class name="com.khadri.hibernate.table.per.concrete.Traveller2"
+		table="TRAVELER2">
+		<id name="travellerId" column="TRAVELER_ID" type="int" />
+		<property name="travellerName" column="TRAVELER_NAME"
+			type="string" />
+	</class>
+
+	<class
+		name="com.khadri.hibernate.table.per.concrete.BykeTraveller2"
+		table="BYKE_TRAVELER2">
+		<id name="travellerId" column="TRAVELER_ID" type="int" />
+		<property name="travellerName" column="TRAVELER_NAME"
+			type="string" />
+		<property name="bykeName" column="BYKE_NAME" type="string" />
+	</class>
+
+
+	<class
+		name="com.khadri.hibernate.table.per.concrete.CarTraveller2"
+		table="CAR_TRAVELER2">
+		<id name="travellerId" column="TRAVELER_ID" type="int" />
+		<property name="travellerName" column="TRAVELER_NAME"
+			type="string" />
+		<property name="carName" column="CAR_NAME" type="string" />
+	</class>
+
+	<class
+		name="com.khadri.hibernate.table.per.concrete.AirTraveller2"
+		table="AIR_TRAVELER2">
+		<id name="travellerId" column="TRAVELER_ID" type="int" />
+		<property name="travellerName" column="TRAVELER_NAME"
+			type="string" />
+		<property name="planeName" column="PLANE_NAME" type="string" />
+	</class>
+
+</hibernate-mapping>

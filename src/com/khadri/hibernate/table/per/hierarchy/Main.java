@@ -1,4 +1,4 @@
-package com.khadri.hibernate.inheritence;
+package com.khadri.hibernate.table.per.hierarchy;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
